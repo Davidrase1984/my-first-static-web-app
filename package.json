@@ -2,19 +2,23 @@
   "name": "hello",
   "version": "0.1.0",
   "private": true,
+
+  "engines": {
+    "node": "18.x"
+  },
+
   "scripts": {
     "start": "serve -s dist",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
-  "engines": {
-  "node": "18.x"
-},
+
   "dependencies": {
     "core-js": "^3.6.4",
     "vue": "^2.6.11"
   },
+
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-plugin-eslint": "~4.2.0",
@@ -24,6 +28,7 @@
     "eslint-plugin-vue": "^6.1.2",
     "vue-template-compiler": "^2.6.11"
   },
+
   "eslintConfig": {
     "root": true,
     "env": {
@@ -38,6 +43,7 @@
     },
     "rules": {}
   },
+
   "browserslist": [
     "> 1%",
     "last 2 versions"
